@@ -2,8 +2,23 @@
  * Orman Suç Tutanağı Web Sitesi Etkileşimleri
  * Vanilla JS tabanlı, performans odaklı animasyon ve ui scripti.
  */
+// ========================================================
+// APK İNDİRME LİNKİ AYARI
+// ========================================================
+// Aşağıdaki adresi arka planda bağlamak istediğiniz indirme
+// linkiyle (Google Drive, Dropbox, vb.) değiştirebilirsiniz.
+const APK_DOWNLOAD_LINK = "https://buraya-link-gelecek.com/orman.apk";
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Tüm indirme butonlarını otomatik olarak yukarıdaki linke yönlendir
+    const downloadButtons = document.querySelectorAll('a[href="#indir"], .cta-action');
+    downloadButtons.forEach(btn => {
+        btn.href = APK_DOWNLOAD_LINK;
+        btn.target = "_blank"; // Yeni sekmede açar
+        btn.rel = "noopener noreferrer"; // Güvenlik önlemi
+    });
+
     
     // 1. Scroll-triggered Animations via IntersectionObserver
     // Sadece eleman ekranda görünür olduğunda animasyon başlatılır.
