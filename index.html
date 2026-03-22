@@ -53,21 +53,7 @@
                     </div>
                 </div>
                 <div class="hero-visual animate-on-scroll stagger-2">
-                    <!-- Subtle glassmorphic card imitating a phone screen -->
-                    <div class="mockup-card">
-                        <div class="mockup-header">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <h3>Yeni Kayıt</h3>
-                            <div class="mockup-map"></div>
-                            <div class="mockup-line w-80"></div>
-                            <div class="mockup-line w-60"></div>
-                            <div class="mockup-btn">Sesli Anlatım</div>
-                        </div>
-                    </div>
+                    <img src="assets/hero-bg.jpg" alt="Manuel raporlama bitti" style="width: 100%; max-width: 380px; margin: 0 auto; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); transform: rotate(2deg); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);" onmouseover="this.style.transform='rotate(0deg) translateY(-10px)'" onmouseout="this.style.transform='rotate(2deg)'">
                 </div>
             </div>
         </section>
@@ -99,20 +85,26 @@
                 </div>
                 
                 <div class="grid grid-3 features-grid">
-                    <div class="card animate-on-scroll stagger-1">
-                        <div class="card-icon">🎙️</div>
-                        <h3>Yapay Zeka Asistanı</h3>
-                        <p>Olay yerini sesli olarak anlatın. Uygulama sizin yerinize orman kanunu terminolojisine uygun, resmi bir tutanak kaleme alır.</p>
+                    <div class="card animate-on-scroll stagger-1" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="assets/feature-ai.jpg" style="width: 100%; height: auto; object-fit: cover;" alt="Yapay Zeka Asistanı">
+                        <div style="padding: var(--space-md);">
+                            <h3>Yapay Zeka Asistanı</h3>
+                            <p>Olay yerini sesli olarak anlatın. Uygulama sizin yerinize orman kanunu terminolojisine uygun, resmi bir tutanak kaleme alır.</p>
+                        </div>
                     </div>
-                    <div class="card animate-on-scroll stagger-2">
-                        <div class="card-icon">🗺️</div>
-                        <h3>Çevrimdışı Harita Bilinci</h3>
-                        <p>Arama motoru, TKGM mülkiyet sorgulama ve mescere haritaları dahil internetsiz ortamlarda dahi yerinizi bilin.</p>
+                    <div class="card animate-on-scroll stagger-2" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="assets/feature-offline.jpg" style="width: 100%; height: auto; object-fit: cover;" alt="Çevrimdışı Harita Bilinci">
+                        <div style="padding: var(--space-md);">
+                            <h3>Çevrimdışı Harita Bilinci</h3>
+                            <p>Arama motoru, TKGM mülkiyet sorgulama ve mescere haritaları dahil internetsiz ortamlarda dahi yerinizi bilin.</p>
+                        </div>
                     </div>
-                    <div class="card animate-on-scroll stagger-3">
-                        <div class="card-icon">📏</div>
-                        <h3>Kroki ve Ölçüm</h3>
-                        <p>Alan hesaplama, mesafe ölçme ve işaretleme araçlarını aynı anda kullanın. Otomatik renkli kroki pdf'iniz tek tıkla hazır.</p>
+                    <div class="card animate-on-scroll stagger-3" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 3rem; aspect-ratio: 9/10;">📏</div>
+                        <div style="padding: var(--space-md);">
+                            <h3>Kroki ve Ölçüm</h3>
+                            <p>Alan hesaplama, mesafe ölçme ve işaretleme araçlarını aynı anda kullanın. Otomatik renkli kroki pdf'iniz tek tıkla hazır.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,7 +114,7 @@
         <section class="highlight full-bleed" id="kullanim">
             <div class="container grid grid-asymmetric highlight-grid">
                 <div class="highlight-image animate-on-scroll">
-                    <div class="abstract-shape"></div>
+                    <img src="assets/highlight.jpg" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);" alt="Hızlı Tutanak Güçlü Orman">
                 </div>
                 <div class="highlight-content animate-on-scroll stagger-1">
                     <h2>Kesintisiz ve Akıcı<br> Bir Devriye Süreci.</h2>
