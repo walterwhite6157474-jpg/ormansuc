@@ -11,12 +11,28 @@ const APK_DOWNLOAD_LINK = "https://buraya-link-gelecek.com/orman.apk";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Tüm indirme butonlarını otomatik olarak yukarıdaki linke yönlendir
+    // "Kullanıcılara açık olmayacak" özelliği için Gizli APK indirme mantığı
+    // Sadece şifreyi bilenler veya URL'de beta anahtarı olanlar yönlendirilen linke geçebilir.
     const downloadButtons = document.querySelectorAll('a[href="#indir"], .cta-action');
     downloadButtons.forEach(btn => {
-        btn.href = APK_DOWNLOAD_LINK;
-        btn.target = "_blank"; // Yeni sekmede açar
-        btn.rel = "noopener noreferrer"; // Güvenlik önlemi
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Eğer URL'de ?beta=1 varsa direkt indir
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('beta') === '1') {
+                window.open(APK_DOWNLOAD_LINK, '_blank');
+                return;
+            }
+            
+            // Şifreli giriş (Kullanıcı prompt'u)
+            const pwd = prompt("Bu özellik herkese açık değildir. Beta tester şifresini giriniz:");
+            if (pwd === "orman" || pwd === "walter") {
+                window.open(APK_DOWNLOAD_LINK, '_blank');
+            } else if (pwd !== null) {
+                alert("Hatalı şifre. Uygulama yakında genel kullanıma açılacaktır.");
+            }
+        });
     });
 
     
