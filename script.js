@@ -7,7 +7,7 @@
 // ========================================================
 // Aşağıdaki adresi arka planda bağlamak istediğiniz indirme
 // linkiyle (Google Drive, Dropbox, vb.) değiştirebilirsiniz.
-const APK_DOWNLOAD_LINK = "https://buraya-link-gelecek.com/orman.apk";
+const APK_DOWNLOAD_LINK = "https://drive.google.com/file/d/1s3dKj-CwaWejL-37Mfb1xf-cnEa6SPVq/view?usp=sharing";
 
 document.addEventListener('DOMContentLoaded', () => {
 
